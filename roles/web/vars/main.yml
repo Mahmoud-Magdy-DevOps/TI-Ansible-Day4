@@ -1,0 +1,10 @@
+package_name: nginx
+mycolor: "#333"
+template_message: "Hello, world!"
+files_to_copy:
+  - index.html
+  - script.js
+  - styles.css
+template:
+  - template_file: index.html.j2
+  - template_file: index.css.j2  

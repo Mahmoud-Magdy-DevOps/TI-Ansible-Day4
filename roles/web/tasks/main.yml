@@ -1,0 +1,14 @@
+- name: Install package
+  package:
+    name: "{{ package_name }}"
+    state: present
+  changed_when: true
+  notify:
+    - handler1
+    - handler2
+
+- name: template
+  template:
+    src: "{{ item.template_file }}"
+    dest: "/var/www/html/{{ item.template_file }}"
+  loop: "{{ template }}"
